@@ -13,8 +13,5 @@ get '/secret/another_link' do
 end
 
 get '/cat' do
-  "<div>
-  <img src='http://bit.ly/1eze8aE'>
-  </div>"
-
+  erb(:cat)
 end
