@@ -24,3 +24,9 @@ get '/named-cat' do
   @name  = params[:name]
   erb :index
 end
+
+post '/renamed-cat' do
+  p params
+  @name  = params[:name]
+  erb :index
+end
