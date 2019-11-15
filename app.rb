@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'shotgun'
 
 get '/' do
   "Hello"
@@ -12,6 +13,14 @@ get '/secret/another_link' do
   "This is a secrey message,,,,,,,"
 end
 
-get '/cat' do
-  erb(:cat)
+get '/random-cat' do
+  p params
+  @name  = params[:name]
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name  = params[:name]
+  erb :index
 end
